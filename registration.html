@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: white;
+    }
+    
+    .form-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color:white;
+        box-shadow: 0 4px 8px black ;
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    h1 {
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 700;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    .form-group label {
+        font-weight: bold;
+        font-size: 14px;
+        color: #555;
+    }
+    
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-top: 5px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+    
+    .form-group input:focus {
+        border-color: #6200ea;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color:white;
+        background-color: #6200ea;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .submit-button:hover {
+        background-color: #4500b5;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form action="submit_registration.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="submit-button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
